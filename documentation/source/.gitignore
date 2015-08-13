@@ -1,2 +1,7 @@
 # Ignore all generated pdf files.
 *.pdf
+
+# Latex output files.
+*.aux
+*.log
+*.toc

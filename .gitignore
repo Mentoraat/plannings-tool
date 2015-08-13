@@ -1,7 +1,2 @@
-# Components installed using bower
-bower_components/
-
-# Latex output files.
-*.aux
-*.log
-*.toc
+# IDE-related folder
+.idea/

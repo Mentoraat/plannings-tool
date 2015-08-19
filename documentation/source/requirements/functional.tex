@@ -1,0 +1,125 @@
+Functional requirements are categorised using the MoSCoW model.
+The MoSCoW model consists of:
+\begin{enumerate}
+  \item Must-haves:\\
+    Must-haves must be implemented during the alpha and must be finished
+    before the beta starts.
+  \item Should-haves:\\
+    Should-haves must be implemented during the beta and must be finished
+    before the product is released.
+  \item Could-haves:\\
+    Could-haves should be implemented during the beta if all should-haves are
+    implemented. All other remaining could-haves should be implemented during
+    incremental release cycles.
+  \item Wont-haves:\\
+    Wont-haves will not be implemented. They are stated to clearly describe
+    what features the tool is not designed for.
+\end{enumerate}
+
+\subsubsection{Must-haves}
+
+\begin{enumerate}
+  \item The user must be able to log in using Single-log on
+
+  \item Administrators must be able to appoint a user as teacher of a course
+
+  \item A teacher must be able to create assignments for a course
+    \begin{enumerate}
+      \item An assignment must have an optional deadline
+
+      \item An assignment must have a suggested length
+
+      \item An assignment must have a name
+
+      \item An assignment must have an optional description
+    \end{enumerate}
+
+  \item A user must be able to subscribe to a course, making him student for
+    a course
+
+  \item A student must be able to view a calendar
+    \begin{enumerate}
+      \item The calendar must have a week view (desktop-only)
+
+      \item The calendar must have a month view (desktop-only)
+
+      \item The calendar must have a day view
+    \end{enumerate}
+
+  \item A teacher must be able to view upcoming assignments in a course overview
+
+  \item A teacher must be able to edit existing upcoming assignments
+
+  \item A student must be able to view upcoming assignments next to the calendar.
+    The calendar must only show assignments that fit the current selected
+    time-frame. The assignments must be sorted by earliest deadline first.
+    \begin{enumerate}
+      \item An upcoming assingment must have the height corresponding to the
+        pre-defined suggested length (desktop-only)
+
+      \item An upcoming assignment must have a title with the name
+
+      \item An upcoming assignment must have a sub-title with the deadline.
+        If the assignment has no deadline, the time is shown the exam is
+        scheduled for the course
+    \end{enumerate}
+
+  \item A student must not be able to edit assignments of other students
+
+  \item A student must be able to view an upcoming assignment
+    \begin{enumerate}
+      \item The upcoming assignment must be placed in the center of the screen
+
+      \item The upcoming assignment must show the description, if it exists
+
+      \item The upcoming assignment must have a button to schedule the assignment.
+        (See next point)
+    \end{enumerate}
+
+  \item A student must be able to schedule an upcoming assignment
+    \begin{enumerate}
+      \item A student must not be able to schedule an assignment in the past
+
+      \item A student must be able to drag the assignment on the calendar
+
+      \item A student must be able to save the scheduled assignment
+
+      \item A student must be able to edit the scheduled time of an assignment
+    \end{enumerate}
+
+  \item A student must be able to finish an assignment
+    \begin{enumerate}
+      \item A student must not be able to finish assignments where the scheduled
+        start time has not been yet
+
+      \item A student must not be able to finish already finished assignments
+
+      \item A student must be able to set an actual spent time
+    \end{enumerate}
+
+  \item A student must be able to view a list of assignments that he/she missed.
+    Missed is defined as all planned assignments which have not been finished
+    for more than 1 day, aswell as all unplanned passed assignments
+
+\end{enumerate}
+
+\subsubsection{Should-haves}
+
+\subsubsection{Could-haves}
+  \item The calendar will not be able to be exported to other calendars
+
+\subsubsection{Wont-haves}
+
+\begin{enumerate}
+  \item The system will not be translated into languages other than English
+
+  \item The system will not be usable without internet
+
+  \item The system will not be usable without enabling Javascript
+
+  \item The calendar will not be customizable
+\end{enumerate}
+
+\input{scenarios}
+
+\input{endpoints}

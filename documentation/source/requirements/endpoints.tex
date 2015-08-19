@@ -1,0 +1,32 @@
+\subsubsection{End-Points}
+
+Course -> user -> assignments
+  filtered: unfinished, finished, per week, per maand
+
+Enums:
+- filtered -> unfinished, finished
+
+GET: users/{userId: Int}/courses
+GET: users/{userId: Int}/courses/{courseId: Int}
+
+GET: users/{userId: Int}/courses/{courseId: Int}/missed
+GET: users/{userId: Int}/courses/{courseId: Int}/{filtered: Enum}/?limit={limit: Int}
+GET: users/{userId: Int}/courses/{courseId: Int}/{filtered: Enum}/?begintime={beginTime: Long}&endtime={endTime: Long}
+
+GET: courses
+GET: courses?study={study: String}&year={year: Int}&courseId={courseId: String}
+
+POST: courses/{courseId: Int}/assignments
+  - name: String
+  - length : Double
+  - deadline (optional): Long
+  - description: String
+  - startingAt: Int
+POST: users/{userId: Int}/courses/{courseId: Int}/assignments (user-created assignments)
+  - name: String
+  - length : Double
+  - deadline (optional): Long
+  - description: String
+POST: users/{userId: Int}/courses/{courseId: Int}/assignments/{assignmentId: Int}/plan
+  - startingAt: Long
+  - length: Double
